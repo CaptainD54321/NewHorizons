@@ -26,4 +26,4 @@ Pack creators: Please see the documentation on islandpacks here // DOCUMENTATION
 * Custom maps for mod regions.
 * Ability to expand map boundaries.
 * Integration with NANDbrew's [Simple Tides](https://github.com/NANDbrew/SimpleTides).
-* 
+* Possibly other features, if suggested by the community or if I think of other features.
