@@ -7,7 +7,7 @@ New Horizons loads in community-created islands using Unity's AssetBundle system
 
 To install islandpacks: On first launch, New Horizons will automatically create a folder named `islandpacks` inside the `BepInEx` folder in your game directory; Unzip islandpacks and place them inside this folder, and they will automatically load when you start the game.
 
-Pack creators: Please see the documentation on islandpacks here // DOCUMENTATION TK
+Pack creators: Please see the [documentation on islandpacks here](documentation/islandpacks.md)
 
 ## Current features:
 * Loading in terrain and scenery assets from islandpacks and placing them in the correct place in the ocean.
