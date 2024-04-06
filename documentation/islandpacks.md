@@ -34,7 +34,7 @@ The following children will be configured:
 All terrain prefabs should be marked as part of an assetbundle named `terrain`, and all scenery scenes should be marked as part of an assetbundle named `scenery`. For more information on setting up assetbundles, see [this Unity manual page](https://docs.unity3d.com/2019.1/Documentation/Manual/AssetBundles-Workflow.html). The script included with the blank Unity project I linked above will add a menu item in the "Assets" menu at the top of your Unity window to build all assetbundles, and will place them in `Assets/Assetbundles`. If you have your own Unity project already, [here is that script](CreateAssetBundles.cs) on its own (place this script in the `Assets/Editor` folder of your Unity project). 
 
 ## JSON Manifest
-The JSON manifest must define the following properties:
+The JSON manifest must be named `manifest.json` and must define the following properties:
 * `guid`: A unique string identifier for this islandpack, I recommend to use reverse domain name notation as you would for a mod, however, as long as it is different from the GUID of any other island pack it will be fine. (NOTE: currently unused, but will become important once I start implementing island economies and have to save data)
 * `name`: The human-readable name of your islandpack, such as `"My Island Pack"`.
 * `islands`: A list of all the islands in your pack, each of which is a JSON object with the following properties:
@@ -64,3 +64,5 @@ The JSON manifest must define the following properties:
   ]
 }
 ```
+## Assembling your islandpack
+Your complete islandpack is a folder containing the `manifest.json` file and the two assetbundles, which should be named `scenery` and `terrain` with no file extension (the `.manifest` files Unity creates are not necessary). This folder can be placed into the `BepInEx/islandpacks` folder in the game directory to load it into the game.
