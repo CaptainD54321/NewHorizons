@@ -110,11 +110,16 @@ internal static class WorldPatch {
         var islandObj = GameObject.Instantiate(island.terrainPrefab,shiftingWorld.transform);
         islandObj.transform.localPosition = shiftingWorld.RealPosToShiftingPos(GlobeCoordsToRealPos(island.location));
         var terrain = islandObj.transform.Find("terrain").gameObject;
-        terrain.layer = 14;
-        terrain.tag = "Terrain";
+        if (terrain != null) {
+            terrain.layer = 14;
+            terrain.tag = "Terrain";
+            foreach (Transform obj in terrain.transform) {
+                obj.gameObject.layer = 14;
+                obj.gameObject.tag = "Terrain";
+            }
+        }
         var horizon = islandObj.AddComponent<IslandHorizon>();
-        island.horizon = horizon;
-        
+        island.horizon = horizon;        
 
         var depthObj = new GameObject();
         depthObj.transform.SetParent(islandObj.transform);
