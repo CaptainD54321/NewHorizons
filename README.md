@@ -20,6 +20,7 @@ Pack creators: Please see the [documentation on islandpacks here](documentation/
 * Economies at custom islands, with missions & trade cargo
 * Full integration with Raw Lion's economy system
 * Possibly shipyards at custom islands
+* Various other smaller tweaks and features to the islandpack format
 
 ## Planned post-1.0 features:
 * Custom regions, possibly with custom currencies as well.
